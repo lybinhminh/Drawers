@@ -47,4 +47,13 @@ public class Drawers <T1,T2>{
             put(a, another.get(a));
         }
     }
+
+    public Set<Pair<T1,T2>> entrySet(){
+        Set<Pair<T1,T2>> result = new HashSet<>();
+        for(int i = 0; i < list.size(); ++i){
+            T1 t = list.get(i);
+            result.add(new Pair<>(t, map.get(i)));
+        }
+        return result;
+    }
 }
